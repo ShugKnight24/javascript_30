@@ -5,3 +5,7 @@
 I will update this README as I complete projects within the course.
 
 1. [Drum Kit](/1_drum_kit) - Finished on 11/6/2017
+
+2. [CSS and JS Clock](2_css_js_clock) - Finished on 11/7/2017
+
+3. [Updating CSS variables with JS](3_css_variables_js) - Finished on 11/8/2017
