@@ -1,4 +1,4 @@
-# CSS + JS Clock
+# Updating CSS Variables with JavaScript
 
 ### 11/8/2017
 
