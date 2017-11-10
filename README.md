@@ -11,3 +11,5 @@ I will update this README as I complete projects within the course.
 3. [Updating CSS variables with JS](3_css_variables_js) - Finished on 11/8/2017
 
 4. [Array Cardio](4_array_cardio) - Finished on 11/9/2017
+
+5. [Flex Panels Image Gallery](5_flex_panel_gallery) - Finished on 11/9/2017
