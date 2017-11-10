@@ -9,3 +9,5 @@ I will update this README as I complete projects within the course.
 2. [CSS and JS Clock](2_css_js_clock) - Finished on 11/7/2017
 
 3. [Updating CSS variables with JS](3_css_variables_js) - Finished on 11/8/2017
+
+4. [Array Cardio](4_array_cardio) - Finished on 11/9/2017
