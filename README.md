@@ -15,3 +15,5 @@ I will update this README as I complete projects within the course.
 5. [Flex Panels Image Gallery](5_flex_panel_gallery) - Finished on 11/9/2017
 
 6. [Ajax Type Ahead](6_ajax_type_ahead) - Finished on 11/11/2017
+
+7. [Array Cardio Day 2](7_array_cardio_2) - Finished on 11/11/2017
