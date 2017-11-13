@@ -1,6 +1,6 @@
 # Fun with HTML5 Canvas
 
-### 11/11/2017
+### 11/11/2017 - 11/12/2017
 
 **Thoughts**: I use HTML5 canvas fairly often at my job, but I enjoyed going through this tutorial as I learned a few cool things.
 
