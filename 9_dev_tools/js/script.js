@@ -8,6 +8,10 @@ function makeGreen() {
 	p.style.fontSize = '50px';
 }
 
+const clickToMakeGreen = document.querySelector('#make-green');
+
+clickToMakeGreen.addEventListener('click', makeGreen);
+
 // Regular
 
 // Interpolated
