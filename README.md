@@ -17,3 +17,5 @@ I will update this README as I complete projects within the course.
 6. [Ajax Type Ahead](6_ajax_type_ahead) - Finished on 11/11/2017
 
 7. [Array Cardio Day 2](7_array_cardio_2) - Finished on 11/11/2017
+
+8. [Fun with HTML 5 Canvas](8_html5_canvas) - Finished on 11/12/2017
