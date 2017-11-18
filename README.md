@@ -21,3 +21,5 @@ I will update this README as I complete projects within the course.
 8. [Fun with HTML 5 Canvas](8_html5_canvas) - Finished on 11/12/2017
 
 9. [14 Must Know Dev Tools Tricks](9_dev_tools) - Finished on 11/13/2017
+
+10. [Hold Shift to Check Multiple Checkboxes](10_check_multiple_boxes) - Finished 11/18/2017
