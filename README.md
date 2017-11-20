@@ -23,3 +23,5 @@ I will update this README as I complete projects within the course.
 9. [14 Must Know Dev Tools Tricks](9_dev_tools) - Finished on 11/13/2017
 
 10. [Hold Shift to Check Multiple Checkboxes](10_check_multiple_boxes) - Finished 11/18/2017
+
+11. [Custom HTML5 Video Player](11_custom_video_player) - Finished 11/19/2017
