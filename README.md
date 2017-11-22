@@ -27,3 +27,5 @@ I will update this README as I complete projects within the course.
 11. [Custom HTML5 Video Player](11_custom_video_player) - Finished 11/19/2017
 
 12. [Key Sequence Detection](12_key_sequence_detection) - Finished 11/20/2017
+
+13. [Slide In On Scroll](13_slide_in_scroll) - Finished 11/21/2017
