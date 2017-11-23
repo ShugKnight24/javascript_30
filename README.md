@@ -29,3 +29,5 @@ I will update this README as I complete projects within the course.
 12. [Key Sequence Detection](12_key_sequence_detection) - Finished 11/20/2017
 
 13. [Slide In On Scroll](13_slide_in_scroll) - Finished 11/21/2017
+
+14. [Object and Arrays - References vs Copying](14_references_vs_copying) - Finished 11/23/2017
