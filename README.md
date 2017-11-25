@@ -31,3 +31,5 @@ I will update this README as I complete projects within the course.
 13. [Slide In On Scroll](13_slide_in_scroll) - Finished 11/21/2017
 
 14. [Object and Arrays - References vs Copying](14_references_vs_copying) - Finished 11/23/2017
+
+15. [LocalStorage and Event Delegation](15_localstorage) - Finished on 11/23/2017
