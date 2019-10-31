@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>JS + CSS Clock</title>
-  <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>JS + CSS Clock</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="clock">
-      <div class="clock-face">
-        <div class="hand hour-hand"></div>
-        <div class="hand min-hand"></div>
-        <div class="hand second-hand"></div>
-      </div>
-    </div>
-  <script src="js/script.js"></script>
+	<div class="digital-clock">
+		<div class="time">
+
+		</div>
+		<div class="day-of-week">
+			<span class="day sunday">Sunday</span>
+			<span class="day monday">Monday</span>
+			<span class="day tuesday">Tuesday</span>
+			<span class="day wednesday">Wednesday</span>
+			<span class="day thursday">Thursday</span>
+			<span class="day friday">Friday</span>
+			<span class="day saturday">Saturday</span>
+		</div>
+		<div class="month-date-year">
+			<span class="month"></span>
+			<span class="date"></span>,
+			<span class="year"></span>
+		</div>
+	</div>
+	<div class="clock">
+		<div class="clock-face">
+			<div class="hand hour-hand"></div>
+			<div class="hand min-hand"></div>
+			<div class="hand second-hand"></div>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
 </body>
 </html>
