@@ -12,23 +12,17 @@ function setTime(){
 	const minutes = currentTime.getMinutes();
 	const seconds = currentTime.getSeconds();
 
-	let dayOfWeek = day;
+	const days = [
+		'Sunday',
+		'Monday',
+		'Tuesday',
+		'Wednesday',
+		'Thursday',
+		'Friday',
+		'Saturday'
+	]
 
-	if (dayOfWeek === 0){
-		dayOfWeek = 'Sunday';
-	} else if (dayOfWeek === 1){
-		dayOfWeek = 'Monday';
-	} else if (dayOfWeek === 2){
-		dayOfWeek = 'Tuesday';
-	} else if (dayOfWeek === 3){
-		dayOfWeek = 'Wednesday';
-	} else if (dayOfWeek === 4){
-		dayOfWeek = 'Thursday';
-	} else if (dayOfWeek === 5){
-		dayOfWeek = 'Friday';
-	} else if (dayOfWeek === 6){
-		dayOfWeek = 'Saturday';
-	}
+	let dayOfWeek = days[day];
 
 	let formattedDate = date;
 
@@ -44,33 +38,22 @@ function setTime(){
 		formattedDate += 'th';
 	}
 
-	let formattedMonth = month;
+	const months = [
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December'
+	]
 
-	if (formattedMonth === 0){
-		formattedMonth = 'January';
-	} else if (formattedMonth === 1){
-		formattedMonth = 'February';
-	} else if (formattedMonth === 2){
-		formattedMonth = 'March';
-	} else if (formattedMonth === 3){
-		formattedMonth = 'April';
-	} else if (formattedMonth === 4){
-		formattedMonth = 'May';
-	} else if (formattedMonth === 5){
-		formattedMonth = 'June';
-	} else if (formattedMonth === 6){
-		formattedMonth = 'July';
-	} else if (formattedMonth === 7){
-		formattedMonth = 'August';
-	} else if (formattedMonth === 8){
-		formattedMonth = 'September';
-	} else if (formattedMonth === 9){
-		formattedMonth = 'October';
-	} else if (formattedMonth === 10){
-		formattedMonth = 'November';
-	} else if (formattedMonth === 11){
-		formattedMonth = 'December';
-	}
+	let formattedMonth = months[month];
 
 	let formattedHours = hours;
 	let dayOrNight = (formattedHours < 12) ? 'A.M.' : 'P.M.';
@@ -103,35 +86,32 @@ function setTime(){
 
 // Digital clock
 function setDigitalTime(){
-	const time = setTime();
+	const { hour, minute, second, dayOrNight } = setTime();
 
-	const digitalTime = time.hour + ':' + time.minute + ':' + time.second + ' ' + time.dayOrNight;
+	const digitalTime = `${ hour }:${ minute }:${ second } ${ dayOrNight }`;
 
 	digitalClock.innerHTML = digitalTime;
 	setInterval(setDigitalTime, 1000);
 }
-setDigitalTime();
 
 function setDayOfWeek(){
 	const time = setTime();
 	const day = document.querySelector(`.day.${(time.day).toLowerCase()}`);
 	day.classList.add('active');
 }
-setDayOfWeek();
 
 function setDate(){
-	const time = setTime();
+	const { month, date, year  } = setTime();
 
-	const month = document.querySelector('.month');
-	month.innerHTML = time.month;
+	const monthElement = document.querySelector('.month');
+	monthElement.innerHTML = month;
 
-	const date = document.querySelector('.date');
-	date.innerHTML = time.date;
+	const dateElement = document.querySelector('.date');
+	dateElement.innerHTML = date;
 
-	const year = document.querySelector('.year');
-	year.innerHTML = time.year;
+	const yearElement = document.querySelector('.year');
+	yearElement.innerHTML = year;
 }
-setDate();
 
 // Analog clock
 const secondHand = document.querySelector('.second-hand');
@@ -139,17 +119,24 @@ const minuteHand = document.querySelector('.min-hand');
 const hourHand = document.querySelector('.hour-hand');
 
 function setAnalogClock(){
-	const time = setTime();
+	const { second, minute, hour} = setTime();
 
-	const secondsDegrees = ((time.second / 60) * 360) + 90;
-	secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+	const secondsDegrees = ((second / 60) * 360) + 90;
+	secondHand.style.transform = `rotate(${ secondsDegrees }deg)`;
 
-	const minutesDegrees = ((time.minute / 60) * 360) + 90;
-	minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
+	const minutesDegrees = ((minute / 60) * 360) + 90;
+	minuteHand.style.transform = `rotate(${ minutesDegrees }deg)`;
 
-	const hoursDegrees = ((time.hour / 12) * 360) + 90;
-	hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+	const hoursDegrees = ((hour / 12) * 360) + 90;
+	hourHand.style.transform = `rotate(${ hoursDegrees }deg)`;
 
 	setInterval(setAnalogClock, 1000);
 }
-setAnalogClock();
+
+function init(){
+	setDigitalTime();
+	setDayOfWeek();
+	setDate();
+	setAnalogClock();
+}
+init();

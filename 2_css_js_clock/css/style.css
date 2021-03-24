@@ -21,17 +21,25 @@ body {
 	font-size: 72px;
 	background-color: #000;
 	color: #CD0000;
-	padding: 20px;
+	padding: 24px;
 	border: 3px solid #FFF;
+	border-radius: 18px;
 }
 
 .day-of-week {
+	display: flex;
+	align-items: center;
 	font-size: 24px;
 	color: grey;
 }
 
+.day-of-week .day {
+	margin: 0 5px;
+}
+
 .day-of-week .active {
 	color: #CD0000;
+	font-size: 30px;
 }
 
 .clock {
