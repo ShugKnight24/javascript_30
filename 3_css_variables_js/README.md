@@ -1,5 +1,8 @@
 # Updating CSS Variables with JavaScript
 
+### 3/24/2021
+- Moved controls to a side navigation
+
 ### 11/8/2017
 
 **Thoughts**: I found today's tutorial really awesome. Things I learned:
