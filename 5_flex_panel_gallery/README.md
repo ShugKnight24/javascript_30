@@ -16,4 +16,4 @@ A couple of things I learned:
 
 ### Future Improvements
 
-  -  I don't particularly like tying the opening of the panels to a `click`. I think it would be be to add the class on `mouseenter` and remove it on `mouseleave`. It seems clunky when multiple panels are open simultaneously.
+  -  I don't particularly like tying the opening of the panels to a `click`. I think it would be be to add the class on `mouseenter` and remove it on `mouseleave`. It seems clunky when multiple panels are open simultaneously. -> Tried this, led to undesirable bounce between panels. Went with a click that toggles all other panels off

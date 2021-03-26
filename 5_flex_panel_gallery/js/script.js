@@ -3,7 +3,16 @@
 const panels = document.querySelectorAll('.panel');
 
 function toggleOpen(){
-	this.classList.toggle('open');
+	if (this.classList.contains('open')){
+		this.classList.toggle('open');
+	} else {
+		resetPanels();
+		this.classList.toggle('open');
+	}
+}
+
+function resetPanels(){
+	panels.forEach(panel => panel.classList.remove('open'))
 }
 
 function toggleActive(event){
