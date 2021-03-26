@@ -25,41 +25,37 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
 
-const fifteen = inventors.filter(inventor => inventor.born >= 1500 && inventor.born < 1600);
-
-console.table(fifteen);
+const bornInFifteen = inventors.filter( ({ born }) => ( born >= 1500 && born < 1600 ));
+console.table(bornInFifteen);
 
 // Array.prototype.map()
 // 2. Give us an array of the inventors' first and last names
 
-const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
-
+const fullNames = inventors.map(({ first: firstName, last: lastName }) => (`${ firstName } ${ lastName }`));
 console.log(fullNames);
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
 
-const orderedInventors = inventors.sort((a, b) => a.born > b.born ? 1 : -1);
-
+const orderedInventors = inventors.sort(({ born: firstBorn }, { born: nextBorn }) => firstBorn > nextBorn ? 1 : -1);
 console.table(orderedInventors);
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
 
-const totalYearsLived = inventors.reduce((total, inventor) => {
-	return total + (inventor.passed - inventor.born);
+const totalYearsLived = inventors.reduce((total, { born, passed: passedAway }) => {
+	return total + (passedAway - born);
 }, 0);
-
 console.log(totalYearsLived);
 
 // 5. Sort the inventors by years lived
 
-const oldestInventors = inventors.sort(function(a, b){
-	const lastGuy = a.passed - a.born;
-	const nextGuy = b.passed - b.born;
-	return lastGuy > nextGuy ? -1 : 1;
+const oldestInventors = inventors.map(inventor => {
+	inventor.age = (inventor.passed - inventor.born);
+	return inventor;
+}).sort(function({ age: firstAge }, { age: nextAge }){
+	return firstAge > nextAge ? -1 : 1;
 });
-
 console.table(oldestInventors);
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
@@ -69,7 +65,7 @@ console.table(oldestInventors);
 // const boulevardLinks = Array.from(boulevardContainer.querySelectorAll('a'));
 //
 // const de = boulevardLinks
-// 	.map(boulevardLink => boulevardLink.textContent)
+// 	.map(({ textContent: linkText }) => linkText)
 // 	.filter(streetName => streetName.includes('de'));
 //
 // console.log(de);
@@ -90,10 +86,8 @@ console.log(alphabetically);
 
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
-const transportationInstances = data.reduce(function(obj, item){
-	if (!obj[item]){
-		obj[item] = 0;
-	}
+const transportationInstances = data.reduce((obj, item) => {
+	if (!obj[item]) obj[item] = 0;
 	obj[item]++;
 	return obj;
 }, {});
