@@ -1,4 +1,59 @@
 html,
 body {
-  margin: 0;
+	margin: 0;
+}
+
+.canvas-container {
+	padding: 25px;
+	text-align: center;
+}
+
+header {
+	background: red;
+	background: -webkit-linear-gradient(left, red, orange , yellow, green, cyan, blue, violet);
+	background: -o-linear-gradient(right, red, orange, yellow, green, cyan, blue, violet);
+	background: -moz-linear-gradient(right, red, orange, yellow, green, cyan, blue, violet);
+	background: linear-gradient(to right, red, orange , yellow, green, cyan, blue, violet);
+	padding: 10px 0;
+}
+
+header h1 {
+	margin: 0;
+	color: white;
+}
+
+header hr {
+	border: 1px solid white;
+	width: 33%;
+	margin: 0 auto 10px;
+}
+
+.info {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.actions {
+	margin: 15px 0;
+}
+
+.stroke-tools {
+	margin: 15px 0;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.stroke-tools h2 {
+	margin: 0;
+	flex-basis: 100%;
+}
+
+canvas {
+	border: 3px solid black;
+}
+
+canvas:hover {
+	cursor: pointer;
 }

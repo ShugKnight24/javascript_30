@@ -1,5 +1,10 @@
 # Fun with HTML5 Canvas
 
+### 3/29/2021
+- Add clear canvas button
+- Add thickness for drawing
+- Add eraser
+
 ### 11/11/2017 - 11/12/2017
 
 **Thoughts**: I use HTML5 canvas fairly often at my job, but I enjoyed going through this tutorial as I learned a few cool things.
@@ -26,11 +31,11 @@ Things I learned:
 
 ### Future Improvements
 
-- Add the ability for a user to clear the canvas without refreshing.
+- ~~Add the ability for a user to clear the canvas without refreshing.~~ - ✅
 
 - Add the ability for a user to select a color of the stroke using a color picker as opposed to incrementing / decrementing the HSL value
 
-- Allow user to select thickness of brush as opposed to just incrementing and decrementing the size.
+- ~~Allow user to select thickness of brush as opposed to just incrementing and decrementing the size.~~ - ✅
 
 - Play with different values of `globalCompositeOperation` of canvas context to see if there is one that works best.
 
@@ -40,6 +45,6 @@ Things I learned:
 
 - Learn how to properly use resize events in canvas if screen size is changed.
 
-- Add Eraser / White color to fix errors.
+- ~~Add Eraser / White color to fix errors.~~ - ✅
 
-  - Add Undo / Redo functionality.
+- Add Undo / Redo functionality.
