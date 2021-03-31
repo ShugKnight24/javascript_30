@@ -109,3 +109,24 @@ drawButton.addEventListener('click', drawMode);
 function drawMode(){
 	eraseMode = false;
 }
+
+// Save Image
+const saveButton = document.querySelector('.save-canvas')
+
+saveButton.addEventListener('click', saveImageToPNG);
+
+function saveImageToPNG(){
+	// IE
+	if ( window.navigator.msSaveBlob ){
+		window.navigator.msSaveBlob(canvas.msToBlong(), 'canvas_drawing.png');
+	} else { // Google / FF / Safari
+		const newImage = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
+		const downloadButton = document.createElement('a');
+
+		document.body.appendChild(downloadButton);
+		downloadButton.href = newImage;
+		downloadButton.download = 'canvas_drawing.png';
+		downloadButton.click();
+		document.body.removeChild(downloadButton);
+	}
+}
