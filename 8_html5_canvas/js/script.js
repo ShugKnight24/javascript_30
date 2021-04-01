@@ -130,3 +130,15 @@ function saveImageToPNG(){
 		document.body.removeChild(downloadButton);
 	}
 }
+
+// settings drawer
+const controlButton = document.querySelector('.open-controls');
+const closeControlsButton = document.querySelector('.close-controls-button');
+const controlsContainer = document.querySelector('.controls-container');
+
+controlButton.addEventListener('click', toggleControlsDrawer);
+closeControlsButton.addEventListener('click', toggleControlsDrawer);
+
+function toggleControlsDrawer(){
+	controlsContainer.classList.toggle('open');
+}

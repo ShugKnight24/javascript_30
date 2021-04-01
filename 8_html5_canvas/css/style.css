@@ -3,18 +3,79 @@ body {
 	margin: 0;
 }
 
+body {
+	--webkit-gradient: -webkit-linear-gradient(left, red, orange , yellow, green, cyan, blue, violet);
+	--opera-gradient: -o-linear-gradient(right, red, orange, yellow, green, cyan, blue, violet);
+	--mozilla-gradient: -moz-linear-gradient(right, red, orange, yellow, green, cyan, blue, violet);
+	--standard-gradient: linear-gradient(to right, red, orange , yellow, green, cyan, blue, violet);
+}
+
 .canvas-container {
+	position: relative;
 	padding: 25px;
 	text-align: center;
 }
 
+.gradient-button {
+	background: var(--webkit-gradient);
+	background: var(--opera-gradient);
+	background: var(--mozilla-gradient);
+	background: var(--standard-gradient);
+	color: white;
+	text-shadow: 3px 3px 3px #000000;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 10px 25px;
+	margin: 0 5px;
+	border-radius: 8px;
+	border: 3px solid white;
+}
+
+.gradient-button:hover {
+	cursor: pointer;
+	opacity: 0.75;
+}
+
+.button {
+	background: white;
+	border: 3px solid transparent;
+	border-image-slice: 1;
+	border-image-source: var(--webkit-gradient);
+	border-image-source: var(--opera-gradient);
+	border-image-source: var(--mozilla-gradient);
+	border-image-source: var(--standard-gradient);
+	border-radius: 8px;
+	padding: 10px 25px;
+	margin: 0 5px;
+}
+
+.button svg {
+	fill: black;
+	-webkit-filter: drop-shadow( 3px 3px 3px #000);
+	filter: drop-shadow( 3px 3px 3px #000);
+}
+
+.button i {
+	color: #000;
+	font-size: 40px;
+	width: 40px;
+	height: 40px;
+}
+
+.button:hover {
+	cursor: pointer;
+	opacity: 0.75;
+}
+
 header {
 	background: red;
-	background: -webkit-linear-gradient(left, red, orange , yellow, green, cyan, blue, violet);
-	background: -o-linear-gradient(right, red, orange, yellow, green, cyan, blue, violet);
-	background: -moz-linear-gradient(right, red, orange, yellow, green, cyan, blue, violet);
-	background: linear-gradient(to right, red, orange , yellow, green, cyan, blue, violet);
+	background: var(--webkit-gradient);
+	background: var(--opera-gradient);
+	background: var(--mozilla-gradient);
+	background: var(--standard-gradient);
 	padding: 10px 0;
+	position: relative;
 }
 
 header h1 {
@@ -26,6 +87,20 @@ header hr {
 	border: 1px solid white;
 	width: 33%;
 	margin: 0 auto 10px;
+}
+
+.open-controls {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.open-controls:hover {
+	cursor: pointer;
+	opacity: .75;
 }
 
 .info {
@@ -52,8 +127,51 @@ header hr {
 
 canvas {
 	border: 3px solid black;
+	border-image-slice: 1;
+	border-image-source: var(--webkit-gradient);
+	border-image-source: var(--opera-gradient);
+	border-image-source: var(--mozilla-gradient);
+	border-image-source: var(--standard-gradient);
 }
 
 canvas:hover {
 	cursor: pointer;
+}
+
+.controls-container {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: white;
+	padding: 50px 10px;
+	border-left: 3px solid black;
+	border-image-slice: 1;
+	border-image-source: var(--webkit-gradient);
+	border-image-source: var(--opera-gradient);
+	border-image-source: var(--mozilla-gradient);
+	border-image-source: var(--standard-gradient);
+	height: 100%;
+}
+
+.controls-container.open {
+	display: block;
+}
+
+.close-controls-button {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	font-size: 24px;
+	font-weight: bold;
+	color: red;
+}
+
+.close-controls-button:hover {
+	color: #CD0000;
+	cursor: pointer;
+}
+
+.controls {
+	padding: 25px 0;
 }
