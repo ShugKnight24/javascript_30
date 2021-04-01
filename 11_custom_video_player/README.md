@@ -1,31 +1,43 @@
 # Custom HTML5 Video Player
 
-### 11/19/2017
+## 4/1/2021
+- Refactored
+  - Added fullscreen button
+  - Update play / pause to icons
+  - Added icon for volume & playback speed
+  - Update playback speed icon on speed change
+  - Update misc styles
+- Updated README
 
-**Thoughts**: This was a good lesson, I really enjoyed going through it.
+## 11/19/2017
+
+**Thoughts**: Enjoyed refactoring this
 
 Things I learned:
 
-- This video seemed like it built up on the content of the previous lessons.
+- This video built on topics covered in previous lessons.
 
-  - I enjoyed seeing ternarys set in variables and then using those variables to update other values.
+  - Ternarys being used to set variables
+    - Gives a lot of flexibility and can be easier to update other values
 
-  - This is the type of thought process I want to follow and the readable code I want to be able to write. Not only will this make my own development process easier, but it will allow me to write code that is easier to read and easier to collaborate on.
+    - Similar to flags in previous lessons, this type of thought process and approach is one I will adopt to improve. A byproduct is it makes my code more readable easier to refactor in the future. 
+      - Will refine my development process, and the increased readibility will transfer to easier collaboration
 
-- I enjoyed seeing the different properties of the video and how they could be used to manipulate how the video played and updating the value of the progress bar.
+- The `video` element has a bunch different properties and events. Cool seeing how these can be utilized to update the UI.
+  - Examples: Video playing, updating the progress bar, speed changes, video time
+  - [Video Events Resource](https://www.w3.org/2010/05/video/mediaevents.html)
 
-### Future Improvements
+## Future Improvements
+- Implement a loop button, replay video when it is finished if
+  - Use a flag, update if button is hit
+  - On video end, replay if flag is set 
 
-- As Wes suggests, adding a button to increase the size of the video to fullscreen.
-
-  - Hitting that button again would reduce the video to its original size.
-
-- A feature that I'm upset YouTube doesn't have is a loop button that would replay the video when it is finished if the loop button is on.
-
-  - Figure out the best way to handle this
-
-- Make the progress bar start initially at zero
-
-  - Technically it does if you hit autoplay
+- Mute volume if you hit the volume button
+  - update icon based off volume like playback rate
 
 - I will look at some other video sites and see how I can improve this player.
+
+## Implemented
+- ~~Add fullscreen button~~ - ✅
+  - Hitting the button again returns video to its original size. -> The browser handles this by default in fullscreen
+- ~~Progress bar starts at zero~~ - ✅
