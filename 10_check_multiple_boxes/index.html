@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Hold Shift to Check Multiple Checkboxes</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,45 +13,55 @@
    When a user clicks a checkbox, holds Shift, and then clicks another checkbox a few rows down, all the checkboxes inbetween those two checkboxes should be checked.
 
   -->
-  <div class="inbox">
-    <div class="item">
-      <input type="checkbox">
-      <p>This is an inbox layout.</p>
+  <main class="checkbox-container">
+    <div class="instructions">
+      <p>After clicking one checkbox, hold the shift button and click another checkbox to select all checkboxes in between </p>
     </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Check one item</p>
+    <div class="inbox">
+      <div class="item check-uncheck">
+        <button class="check-all">
+          <i class="fas fa-check-square"></i>
+        </button>
+        <p>Select All</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>This is an inbox layout.</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Check one item</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Hold down your Shift key</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Check a lower item</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Everything inbetween should also be set to checked</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Try do it without any libraries</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Just regular JavaScript</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Good Luck!</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Don't forget to tweet your result!</p>
+      </div>
     </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Hold down your Shift key</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Check a lower item</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Everything inbetween should also be set to checked</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Try do it with out any libraries</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Just regular JavaScript</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Good Luck!</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Don't forget to tweet your result!</p>
-    </div>
-  </div>
-
-<script src="js/script.js"></script>
+  </main>
+  <script src="js/script.js"></script>
 </body>
 </html>
