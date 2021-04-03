@@ -50,8 +50,32 @@ body {
 	margin: 0 5px;
 }
 
+.button.active {
+	background: var(--webkit-gradient);
+	background: var(--opera-gradient);
+	background: var(--mozilla-gradient);
+	background: var(--standard-gradient);
+	color: white;
+	text-shadow: 3px 3px 3px #000;
+}
+
+.random {
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 10px 25px;
+	margin: 15px 5px 0;
+	border-radius: 8px;
+}
+
 .button svg {
 	fill: black;
+	-webkit-filter: drop-shadow( 3px 3px 3px #000);
+	filter: drop-shadow( 3px 3px 3px #000);
+}
+
+.button.active svg  {
+	fill: white;
 	-webkit-filter: drop-shadow( 3px 3px 3px #000);
 	filter: drop-shadow( 3px 3px 3px #000);
 }
@@ -61,6 +85,16 @@ body {
 	font-size: 40px;
 	width: 40px;
 	height: 40px;
+}
+
+.button.active i {
+	color: white;
+	filter: drop-shadow( 3px 3px 3px #000);
+}
+
+.eraser.active i::after {
+	opacity: 1;
+	color: #E9BCB5;
 }
 
 .button:hover {

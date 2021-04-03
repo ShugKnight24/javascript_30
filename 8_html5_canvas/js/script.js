@@ -77,9 +77,13 @@ strokeSizeButtons.forEach(strokeButton => {
 function resizeStroke(){
 	const strokeSize = this.dataset.strokeSize;
 
-	if (strokeSize === 'random' && ctx.lineWidth === 100){
+	if (strokeSize === 'random'){
+		if (ctx.lineWidth = 100){
+			ctx.lineWidth = 99
+		}
 		manualStroke = false;
 		direction = !direction;
+		setButtonActive(this);
 		return;
 	}
 
@@ -90,6 +94,7 @@ function resizeStroke(){
 	if (strokeSize === 'large') ctx.lineWidth = 100;
 
 	manualStroke = true;
+	setButtonActive(this);
 }
 
 // Eraser
@@ -99,6 +104,7 @@ eraserButton.addEventListener('click', eraser);
 
 function eraser(){
 	eraseMode = true;
+	setButtonActive(this);
 }
 
 // Draw Mode
@@ -108,6 +114,7 @@ drawButton.addEventListener('click', drawMode);
 
 function drawMode(){
 	eraseMode = false;
+	setButtonActive(this);
 }
 
 // Save Image
@@ -129,4 +136,14 @@ function saveImageToPNG(){
 		downloadButton.click();
 		document.body.removeChild(downloadButton);
 	}
+}
+
+// Button Active States
+function setButtonActive(element){
+	const siblings = element.parentNode.children
+	
+	Array.from(siblings).forEach(function(element) {
+		element.classList.remove('active');
+	});
+	element.classList.add('active');	
 }
