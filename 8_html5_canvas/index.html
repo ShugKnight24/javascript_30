@@ -13,20 +13,11 @@
     <header>
       <h1>Drawr</h1>
       <hr />
-      <div class="open-controls">
-        <i class="fas fa-bars"></i> Controls
-      </div>
     </header>
     <div class="info">
       <div class="instructions">
         <p>Click and drag your mouse / finger to start drawing</p>
       </div>
-    </div>
-    <canvas id="draw" width="800" height="800"></canvas>
-    <div class="controls-container">
-      <span class="close-controls-button">
-        <i class="fas fa-times"></i> Close
-      </span>
       <div class="controls">
         <button class="gradient-button clear-canvas">
           Clear Canvas
@@ -58,13 +49,14 @@
           <button class="button eraser">
             <i class="fad fa-eraser"></i>
           </button>
-          draw Mode
+          Draw Mode
           <button class="button draw-mode">
             <i class="fas fa-pencil-alt"></i>
           </button>
         </div>
       </div>
     </div>
+    <canvas id="draw" width="800" height="800"></canvas>
   </main>
   <script src="js/script.js"></script>
 </body>
