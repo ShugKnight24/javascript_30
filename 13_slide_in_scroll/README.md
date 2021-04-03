@@ -1,29 +1,29 @@
 # Slide In On Scroll
 
-### 11/21/2017
+## 4/3/2021 - Refactor
+- Add more images to HTML
+- Refactor Javascript
+- Update README.md
+## 11/21/2017
 
-**Thoughts**: This was an enjoyable lesson. I did something similar to this in an earlier project where I would only load images if they were in the viewport.
+**Thoughts**: This was a good lesson and the content may help me refactor a project I build where I would only load images pulled from a database if they were in the viewport.
 
 Things I Learned:
 
-- I typically use throttle at work, but I was fortunate to see this lesson because there is a problem I am trying to solve that debounce looks like it would be perfect for.
+- I typically use `.throttle()` at work. Using a `debounce` may help fix problems I've ecounered when using throttle.
 
-- I need to get more familiar with all of the different properties that exist on different objects in the DOM.
+- I plan on getting more familiar with the different properties that exist on different objects in the DOM. The only way I can do this will be by building more projects.
 
-  - I really liked how Wes used these different properties to create variables that helped to solve the problem he was encountering.
+  - Liked how Wes used different properties as create variables to solve the problem in a creative manner.
 
-  - The knowledge of all of these properties would better allow an individual to understand what information they can use to solve any problem they encounter. I suppose this is something that I will get better at with time.
+  - The knowledge of these properties would better allow someone to understand what information is available to solve a problem they encounter. This is something that will improve with time and practice.
 
-- I need to get better at creating variables that I can plug in to conditional logic to make my work more readable.
-
-  - I really liked seeing this done.
+- I plan on getting better at creating flexible variables that can be plugged into conditional logic to make the code more readable.
 
 ### Future Improvements
 
 - I'm not a huge fan of the scroll in effect that was used. It feels clunky to me.
 
-  - I may play around with different effects to see which one I like best and see if I need to approach the problem any differently to solve it.
+  - I may test different effects to see which ones I like best and see if I'm able to approach the problem differently to solve it.
 
-- I may play around with sliding in content that isn't an image. Like a paragraph or a header.
-
-  - I probably would like this effect even less, but I would want to see how it could be achieved. 
+- I will also test sliding in different content and seeing how that looks

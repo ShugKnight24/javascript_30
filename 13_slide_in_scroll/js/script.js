@@ -1,55 +1,41 @@
 'use strict';
 
-function debounce(func, wait = 20, immediate = true) {
+function debounce(callback, wait = 75, immediate = true) {
 
 	var timeout;
 
 	return function() {
-
-		var context = this, args = arguments;
+		var context = this,
+			args = arguments;
 
 		var later = function() {
-
 			timeout = null;
-			if (!immediate) func.apply(context, args);
-
+			if (!immediate) callback.apply(context, args);
 		};
 
 		var callNow = immediate && !timeout;
 
 		clearTimeout(timeout);
 		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-
+		if (callNow) callback.apply(context, args);
 	};
 }
 
-const sliderImages = document.querySelectorAll('.slide-in');
+const slideInImages = document.querySelectorAll('.slide-in');
 
-function checkSlide(event){
+function checkSlide(){
+	slideInImages.forEach(slideInImage => {
 
-	sliderImages.forEach(sliderImage => {
-
-		// Halfway through the image
-		const slideInAt = (window.scrollY + window.innerHeight) - (sliderImage.height / 2);
-
+		// Half of image
+		const slideInAt = (window.scrollY + window.innerHeight) - (slideInImage.height / 2);
 		// Bottom of the image
-		const imageBottom = (sliderImage.offsetTop + sliderImage.height)
-
-		const isHalfShown = slideInAt > sliderImage.offsetTop;
-
+		const imageBottom = (slideInImage.offsetTop + slideInImage.height)
+		const isHalfShown = slideInAt > slideInImage.offsetTop;
 		const isNotScrolledPast = window.scrollY < imageBottom;
 
-		if (isHalfShown && isNotScrolledPast){
-
-			sliderImage.classList.add('active');
-
-		} else {
-
-			sliderImage.classList.remove('active');
-
-		}
-
+		(isHalfShown && isNotScrolledPast)
+			? slideInImage.classList.add('active')
+			: slideInImage.classList.remove('active');
 	});
 
 }
