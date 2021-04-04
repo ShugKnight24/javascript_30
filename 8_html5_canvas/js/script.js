@@ -20,14 +20,20 @@ let hue = 0;
 let direction = true;
 let manualStroke = false;
 let eraseMode = false;
+let customColor = false;
+let customStroke = '';
 
 function draw(event){
 
 	// Stop drawing if not clicking mouse down
 	if (!isDrawing) return;
 
-	// console.log(event);
-	ctx.strokeStyle = eraseMode ? '#FFF' : `hsl(${ hue }, 100%, 50%)`;
+	if (customColor) {
+		ctx.strokeStyle = customStroke;
+	} else {
+		ctx.strokeStyle = eraseMode ? '#FFF' : `hsl(${ hue }, 100%, 50%)`;
+	}
+
 	ctx.beginPath();
 
 	// Start line from
@@ -44,6 +50,7 @@ function draw(event){
 	if (!manualStroke){
 		if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) direction = !direction;
 		direction ? ctx.lineWidth++ : ctx.lineWidth--;
+		brushSizeSlider.value = ctx.lineWidth;
 	}
 
 }
@@ -77,19 +84,48 @@ strokeSizeButtons.forEach(strokeButton => {
 function resizeStroke(){
 	const strokeSize = this.dataset.strokeSize;
 
-	if (strokeSize === 'random' && ctx.lineWidth === 100){
+	if (strokeSize === 'random'){
+		if (ctx.lineWidth = 100){
+			ctx.lineWidth = 99;
+		}
 		manualStroke = false;
 		direction = !direction;
+		setButtonActive(this);
 		return;
 	}
 
 	if (strokeSize === 'random') return manualStroke = false;
 
-	if (strokeSize === 'small') ctx.lineWidth = 25;
-	if (strokeSize === 'medium') ctx.lineWidth = 50;
-	if (strokeSize === 'large') ctx.lineWidth = 100;
+	if (strokeSize === 'small') ctx.lineWidth = 25, brushSizeSlider.value = 25;
+	if (strokeSize === 'medium') ctx.lineWidth = 50, brushSizeSlider.value = 50;
+	if (strokeSize === 'large') ctx.lineWidth = 100, brushSizeSlider.value = 100;
 
 	manualStroke = true;
+	setButtonActive(this);
+}
+
+// Custom Stroke Size
+const brushSizeSlider = document.querySelector('.brush-size-slider');
+const brushSliderMinus = document.querySelector('.custom-brush-size .fa-minus');
+const brushSliderPlus = document.querySelector('.custom-brush-size .fa-plus');
+
+brushSizeSlider.addEventListener('change', handleBrushSize);
+
+function handleBrushSize(){
+	setButtonActive(this);
+	manualStroke = true;
+	ctx.lineWidth = this.value;
+}
+
+brushSliderMinus.addEventListener('click', decrementBrushSize);
+brushSliderPlus.addEventListener('click', incrementBrushSize);
+
+function decrementBrushSize(){
+	brushSizeSlider.value -= 5;
+}
+
+function incrementBrushSize(){
+	brushSizeSlider.stepUp(5);
 }
 
 // Eraser
@@ -99,6 +135,7 @@ eraserButton.addEventListener('click', eraser);
 
 function eraser(){
 	eraseMode = true;
+	setButtonActive(this);
 }
 
 // Draw Mode
@@ -108,10 +145,11 @@ drawButton.addEventListener('click', drawMode);
 
 function drawMode(){
 	eraseMode = false;
+	setButtonActive(this);
 }
 
 // Save Image
-const saveButton = document.querySelector('.save-canvas')
+const saveButton = document.querySelector('.save-canvas');
 
 saveButton.addEventListener('click', saveImageToPNG);
 
@@ -131,14 +169,60 @@ function saveImageToPNG(){
 	}
 }
 
-// settings drawer
-const controlButton = document.querySelector('.open-controls');
-const closeControlsButton = document.querySelector('.close-controls-button');
-const controlsContainer = document.querySelector('.controls-container');
+// Button Active States
+function setButtonActive(element){
+	let siblings = element.parentNode.children;
+	const isBrushSlider = element.classList.contains('brush-size-slider');
 
-controlButton.addEventListener('click', toggleControlsDrawer);
-closeControlsButton.addEventListener('click', toggleControlsDrawer);
+	if (isBrushSlider) siblings = element.parentNode.parentNode.children;
+	
+	Array.from(siblings).forEach(function(element) {
+		element.classList.remove('active');
+	});
+	element.classList.add('active');	
+}
 
-function toggleControlsDrawer(){
-	controlsContainer.classList.toggle('open');
+// Color Logic
+const colorPicker = document.querySelector('.color-picker');
+const colorInput = document.querySelector('.color-input');
+const randomizeColorButton = document.querySelector('.randomize-color');
+
+colorPicker.addEventListener('input', updateColor);
+colorPicker.addEventListener('propertychange', updateColor);
+colorInput.addEventListener('input', updateColor);
+colorInput.addEventListener('propertychange', updateColor);
+
+function updateColor(){
+	const isInput = this.classList.contains('color-input');
+
+	isInput ? validateInputColor(this.value) : setColor(this.value);
+}
+
+function setColor(selectedColor){
+	colorInput.value = selectedColor.toUpperCase();
+	customStroke = selectedColor;
+	customColor = true;
+	randomizeColorButton.classList.remove('active');
+}
+
+function validateInputColor(selectedColor){
+	const colorValidator = /^#([0-9A-F]{3}){1,2}$/i.test(selectedColor);
+
+	if (!colorValidator) return;
+
+	if (selectedColor.length === 4){
+		selectedColor = '#' + selectedColor[1] + selectedColor[1] + selectedColor[2] + selectedColor[2] + selectedColor[3] + selectedColor[3];
+	}
+
+	colorPicker.value = selectedColor;
+	customStroke = selectedColor;
+	customColor = true;
+	randomizeColorButton.classList.remove('active');
+}
+
+randomizeColorButton.addEventListener('click', randomizeColor);
+
+function randomizeColor(){
+	this.classList.add('active');
+	customColor = false;
 }

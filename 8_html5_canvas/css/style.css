@@ -50,8 +50,33 @@ body {
 	margin: 0 5px;
 }
 
+.button.active {
+	background: var(--webkit-gradient);
+	background: var(--opera-gradient);
+	background: var(--mozilla-gradient);
+	background: var(--standard-gradient);
+	color: white;
+	text-shadow: 3px 3px 3px #000;
+}
+
+.randomize-color,
+.random {
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 10px 25px;
+	margin: 15px 5px 0;
+	border-radius: 8px;
+}
+
 .button svg {
 	fill: black;
+	-webkit-filter: drop-shadow( 3px 3px 3px #000);
+	filter: drop-shadow( 3px 3px 3px #000);
+}
+
+.button.active svg  {
+	fill: white;
 	-webkit-filter: drop-shadow( 3px 3px 3px #000);
 	filter: drop-shadow( 3px 3px 3px #000);
 }
@@ -61,6 +86,16 @@ body {
 	font-size: 40px;
 	width: 40px;
 	height: 40px;
+}
+
+.button.active i {
+	color: white;
+	filter: drop-shadow( 3px 3px 3px #000);
+}
+
+.eraser.active i::after {
+	opacity: 1;
+	color: #E9BCB5;
 }
 
 .button:hover {
@@ -89,33 +124,24 @@ header hr {
 	margin: 0 auto 10px;
 }
 
-.open-controls {
-	position: absolute;
-	top: 25px;
-	right: 25px;
-	color: white;
-	font-size: 18px;
-	font-weight: bold;
-}
-
-.open-controls:hover {
-	cursor: pointer;
-	opacity: .75;
-}
-
 .info {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	flex-direction: column;
 }
 
-.actions {
-	margin: 15px 0;
+.controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 0;
 }
 
 .stroke-tools {
 	margin: 15px 0;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	flex-wrap: wrap;
 }
@@ -123,6 +149,49 @@ header hr {
 .stroke-tools h2 {
 	margin: 0;
 	flex-basis: 100%;
+}
+
+.custom-brush-size {
+	margin: 15px 0;
+}
+
+.custom-brush-size i {
+	font-size: 24px;
+}
+
+.custom-brush-size i:hover {
+	cursor: pointer;
+}
+
+.stroke-tools button {
+	margin-bottom: 15px;
+}
+
+.stroke-tools button:last-of-type {
+	margin: 0;
+}
+
+.draw-erase-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.draw-erase-container .eraser {
+	margin-bottom: 15px;
+}
+
+.color-selector-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 15px;
+}
+
+.color-selector-container input {
+	margin-bottom: 15px;
 }
 
 canvas {
@@ -136,42 +205,4 @@ canvas {
 
 canvas:hover {
 	cursor: pointer;
-}
-
-.controls-container {
-	display: none;
-	position: absolute;
-	top: 0;
-	right: 0;
-	background: white;
-	padding: 50px 10px;
-	border-left: 3px solid black;
-	border-image-slice: 1;
-	border-image-source: var(--webkit-gradient);
-	border-image-source: var(--opera-gradient);
-	border-image-source: var(--mozilla-gradient);
-	border-image-source: var(--standard-gradient);
-	height: 100%;
-}
-
-.controls-container.open {
-	display: block;
-}
-
-.close-controls-button {
-	position: absolute;
-	top: 25px;
-	right: 25px;
-	font-size: 24px;
-	font-weight: bold;
-	color: red;
-}
-
-.close-controls-button:hover {
-	color: #CD0000;
-	cursor: pointer;
-}
-
-.controls {
-	padding: 25px 0;
 }

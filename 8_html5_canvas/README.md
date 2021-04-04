@@ -1,6 +1,15 @@
 # Fun with HTML5 Canvas
 
-### 3/29/2021
+## 4/3/2021
+- Move Controls back to main page
+- Button Active state
+- Add custom colors
+
+## 3/31/2021
+- Users can now save images
+- Moved controls to a side container
+
+## 3/29/2021
 - Add clear canvas button
 - Add thickness for drawing
 - Add eraser
@@ -33,7 +42,7 @@ Things I learned:
 
 - ~~Add the ability for a user to clear the canvas without refreshing.~~ - ✅
 
-- Add the ability for a user to select a color of the stroke using a color picker as opposed to incrementing / decrementing the HSL value
+- ~~Add the ability for a user to select a color of the stroke using a color picker as opposed to incrementing / decrementing the HSL value~~ - ✅
 
 - ~~Allow user to select thickness of brush as opposed to just incrementing and decrementing the size.~~ - ✅
 

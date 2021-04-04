@@ -13,20 +13,11 @@
     <header>
       <h1>Drawr</h1>
       <hr />
-      <div class="open-controls">
-        <i class="fas fa-bars"></i> Controls
-      </div>
     </header>
     <div class="info">
       <div class="instructions">
         <p>Click and drag your mouse / finger to start drawing</p>
       </div>
-    </div>
-    <canvas id="draw" width="800" height="800"></canvas>
-    <div class="controls-container">
-      <span class="close-controls-button">
-        <i class="fas fa-times"></i> Close
-      </span>
       <div class="controls">
         <button class="gradient-button clear-canvas">
           Clear Canvas
@@ -36,6 +27,11 @@
         </button>
         <div class="stroke-tools">
           <h2>Brush Size</h2>
+          <div class="custom-brush-size">
+            <i class="fas fa-minus"></i>
+            <input class="brush-size-slider" type="range" name="brush-size-slider" min="3" max="200" value="100">
+            <i class="fas fa-plus"></i>
+          </div>
           <button class="button small" data-stroke-size="small">
             <svg viewBox="0 0 10 10" width="10" height="10">
               <circle class="circle" cx="05" cy="05" r="05"/>
@@ -51,20 +47,29 @@
               <circle class="circle" cx="20" cy="20" r="20"/>
             </svg>
           </button>
-          <button class="gradient-button random" data-stroke-size="random">Randomize</button>
+          <button class="button random active" data-stroke-size="random">Randomize</button>
         </div>
         <div class="draw-erase-container">
           Erase Mode
           <button class="button eraser">
             <i class="fad fa-eraser"></i>
           </button>
-          draw Mode
-          <button class="button draw-mode">
+          Draw Mode
+          <button class="button draw-mode active">
             <i class="fas fa-pencil-alt"></i>
           </button>
         </div>
+        <div class="color-selector-container">
+          <h2 class="tool-header">Colors</h2>
+          <label for="color-picker">Color Picker</label>
+          <input id="color-picker" class="color-picker" type="color" name="base" value="#000000">
+          <label for="color-input">Hex Input</label>
+          <input id="color-input" class="color-input" type="text" name="base" value="#000000">
+          <button class="button randomize-color active">Randomize</button>
+        </div>
       </div>
     </div>
+    <canvas id="draw" width="800" height="800"></canvas>
   </main>
   <script src="js/script.js"></script>
 </body>
