@@ -141,6 +141,7 @@ header hr {
 .stroke-tools {
 	margin: 15px 0;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	flex-wrap: wrap;
 }
@@ -148,6 +149,26 @@ header hr {
 .stroke-tools h2 {
 	margin: 0;
 	flex-basis: 100%;
+}
+
+.custom-brush-size {
+	margin: 15px 0;
+}
+
+.custom-brush-size i {
+	font-size: 24px;
+}
+
+.custom-brush-size i:hover {
+	cursor: pointer;
+}
+
+.stroke-tools button {
+	margin-bottom: 15px;
+}
+
+.stroke-tools button:last-of-type {
+	margin: 0;
 }
 
 .draw-erase-container {

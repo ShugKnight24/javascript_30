@@ -50,6 +50,7 @@ function draw(event){
 	if (!manualStroke){
 		if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) direction = !direction;
 		direction ? ctx.lineWidth++ : ctx.lineWidth--;
+		brushSizeSlider.value = ctx.lineWidth;
 	}
 
 }
@@ -95,12 +96,36 @@ function resizeStroke(){
 
 	if (strokeSize === 'random') return manualStroke = false;
 
-	if (strokeSize === 'small') ctx.lineWidth = 25;
-	if (strokeSize === 'medium') ctx.lineWidth = 50;
-	if (strokeSize === 'large') ctx.lineWidth = 100;
+	if (strokeSize === 'small') ctx.lineWidth = 25, brushSizeSlider.value = 25;
+	if (strokeSize === 'medium') ctx.lineWidth = 50, brushSizeSlider.value = 50;
+	if (strokeSize === 'large') ctx.lineWidth = 100, brushSizeSlider.value = 100;
 
 	manualStroke = true;
 	setButtonActive(this);
+}
+
+// Custom Stroke Size
+const brushSizeSlider = document.querySelector('.brush-size-slider');
+const brushSliderMinus = document.querySelector('.custom-brush-size .fa-minus');
+const brushSliderPlus = document.querySelector('.custom-brush-size .fa-plus');
+
+brushSizeSlider.addEventListener('change', handleBrushSize);
+
+function handleBrushSize(){
+	setButtonActive(this);
+	manualStroke = true;
+	ctx.lineWidth = this.value;
+}
+
+brushSliderMinus.addEventListener('click', decrementBrushSize);
+brushSliderPlus.addEventListener('click', incrementBrushSize);
+
+function decrementBrushSize(){
+	brushSizeSlider.value -= 5;
+}
+
+function incrementBrushSize(){
+	brushSizeSlider.stepUp(5);
 }
 
 // Eraser
@@ -146,7 +171,10 @@ function saveImageToPNG(){
 
 // Button Active States
 function setButtonActive(element){
-	const siblings = element.parentNode.children;
+	let siblings = element.parentNode.children;
+	const isBrushSlider = element.classList.contains('brush-size-slider');
+
+	if (isBrushSlider) siblings = element.parentNode.parentNode.children;
 	
 	Array.from(siblings).forEach(function(element) {
 		element.classList.remove('active');
