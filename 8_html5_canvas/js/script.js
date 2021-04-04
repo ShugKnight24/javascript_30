@@ -85,7 +85,7 @@ function resizeStroke(){
 
 	if (strokeSize === 'random'){
 		if (ctx.lineWidth = 100){
-			ctx.lineWidth = 99
+			ctx.lineWidth = 99;
 		}
 		manualStroke = false;
 		direction = !direction;
@@ -124,7 +124,7 @@ function drawMode(){
 }
 
 // Save Image
-const saveButton = document.querySelector('.save-canvas')
+const saveButton = document.querySelector('.save-canvas');
 
 saveButton.addEventListener('click', saveImageToPNG);
 
@@ -146,7 +146,7 @@ function saveImageToPNG(){
 
 // Button Active States
 function setButtonActive(element){
-	const siblings = element.parentNode.children
+	const siblings = element.parentNode.children;
 	
 	Array.from(siblings).forEach(function(element) {
 		element.classList.remove('active');
@@ -195,6 +195,6 @@ function validateInputColor(selectedColor){
 randomizeColorButton.addEventListener('click', randomizeColor);
 
 function randomizeColor(){
-	this.classList.add('active')
+	this.classList.add('active');
 	customColor = false;
 }
