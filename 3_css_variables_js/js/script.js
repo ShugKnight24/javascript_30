@@ -13,26 +13,20 @@ function handleUpdate(){
 		colorInput.value = this.value.toUpperCase();
 	}
 
-	// TODO: Refactor ShortHand Logic
-	// if (this.id === 'base-input'){
+	if (this.id === 'base-input'){
+		const colorValidator = /^#([0-9A-F]{3}){1,2}$/i.test(inputValue);
 
-	// 	if (this.value.length === 3){
-	// 		inputValue = '#' + inputValue[0] + inputValue[0] + inputValue[1] + inputValue[1] + inputValue[2] + inputValue[2];
-	// 	}
-	// 	if (this.value.length === 4){
-	// 		inputValue = '#' + inputValue[1] + inputValue[1] + inputValue[2] + inputValue[2] + inputValue[3] + inputValue[3];
-	// 	}
-	// 	// // TODO: Fix this conditional logic
-	// 	if (this.value.length !== 3 || this.value.length !== 4 || this.value.length !== 6 || this.value.length !== 7){
-	// 		console.log(this.value.length);
-	// 		inputValue = '#FFC600';
-	// 	}
+		if (!colorValidator) return;
+	
+		if (inputValue.length === 4){
+			inputValue = '#' + inputValue[1] + inputValue[1] + inputValue[2] + inputValue[2] + inputValue[3] + inputValue[3];
+		}
 
-	// 	const base = getId('base');
-	// 	const colorInput = getId('base-input');
-	// 	base.value = inputValue;
-	// 	colorInput.value = inputValue;
-	// }
+		const base = getId('base');
+		const colorInput = getId('base-input');
+		base.value = inputValue;
+		colorInput.value = inputValue;
+	}
 
 	document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
 }
