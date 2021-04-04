@@ -33,7 +33,7 @@ Things I learned:
 
 - ~~Add the ability for a user to clear the canvas without refreshing.~~ - ✅
 
-- Add the ability for a user to select a color of the stroke using a color picker as opposed to incrementing / decrementing the HSL value
+- ~~Add the ability for a user to select a color of the stroke using a color picker as opposed to incrementing / decrementing the HSL value~~ - ✅
 
 - ~~Allow user to select thickness of brush as opposed to just incrementing and decrementing the size.~~ - ✅
 

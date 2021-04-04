@@ -20,14 +20,20 @@ let hue = 0;
 let direction = true;
 let manualStroke = false;
 let eraseMode = false;
+let customColor = false;
+let customStroke = '';
 
 function draw(event){
 
 	// Stop drawing if not clicking mouse down
 	if (!isDrawing) return;
 
-	// console.log(event);
-	ctx.strokeStyle = eraseMode ? '#FFF' : `hsl(${ hue }, 100%, 50%)`;
+	if (customColor) {
+		ctx.strokeStyle = customStroke;
+	} else {
+		ctx.strokeStyle = eraseMode ? '#FFF' : `hsl(${ hue }, 100%, 50%)`;
+	}
+
 	ctx.beginPath();
 
 	// Start line from
@@ -146,4 +152,49 @@ function setButtonActive(element){
 		element.classList.remove('active');
 	});
 	element.classList.add('active');	
+}
+
+// Color Logic
+const colorPicker = document.querySelector('.color-picker');
+const colorInput = document.querySelector('.color-input');
+const randomizeColorButton = document.querySelector('.randomize-color');
+
+colorPicker.addEventListener('input', updateColor);
+colorPicker.addEventListener('propertychange', updateColor);
+colorInput.addEventListener('input', updateColor);
+colorInput.addEventListener('propertychange', updateColor);
+
+function updateColor(){
+	const isInput = this.classList.contains('color-input');
+
+	isInput ? validateInputColor(this.value) : setColor(this.value);
+}
+
+function setColor(selectedColor){
+	colorInput.value = selectedColor.toUpperCase();
+	customStroke = selectedColor;
+	customColor = true;
+	randomizeColorButton.classList.remove('active');
+}
+
+function validateInputColor(selectedColor){
+	const colorValidator = /^#([0-9A-F]{3}){1,2}$/i.test(selectedColor);
+
+	if (!colorValidator) return;
+
+	if (selectedColor.length === 4){
+		selectedColor = '#' + selectedColor[1] + selectedColor[1] + selectedColor[2] + selectedColor[2] + selectedColor[3] + selectedColor[3];
+	}
+
+	colorPicker.value = selectedColor;
+	customStroke = selectedColor;
+	customColor = true;
+	randomizeColorButton.classList.remove('active');
+}
+
+randomizeColorButton.addEventListener('click', randomizeColor);
+
+function randomizeColor(){
+	this.classList.add('active')
+	customColor = false;
 }

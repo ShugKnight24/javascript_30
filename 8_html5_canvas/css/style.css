@@ -59,6 +59,7 @@ body {
 	text-shadow: 3px 3px 3px #000;
 }
 
+.randomize-color,
 .random {
 	font-size: 18px;
 	font-weight: bold;
@@ -157,6 +158,18 @@ header hr {
 }
 
 .draw-erase-container .eraser {
+	margin-bottom: 15px;
+}
+
+.color-selector-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 15px;
+}
+
+.color-selector-container input {
 	margin-bottom: 15px;
 }
 
