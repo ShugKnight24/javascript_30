@@ -1,27 +1,28 @@
 # Objects and Arrays - References vs Copying
 
-### 11/23/2017
+## 4/4/2021
+- Refactor
+- Update README
 
-**Thoughts**: It was fun playing around with the different techniques used on both arrays and objects. I was familiar with a few of these, and after going through a couple of examples, it began to make more sense, but it was nice to get an opportunity to play with things I don't typically do at work. Been really enjoying this JavaScript 30 course thus far. It really does teach you how to approach problems you face in a different manner.
+## 11/23/2017
+
+**Thoughts**: Fun playing  with the different arrays and object techniques. While familiar with some of these, going through the examples began to make more sense, and solidified my knowledge and understanding. Always good to gain a different perspective and see how to approach or even see something you face in a different manner.
 
 Things I learned:
 
 - Using `slice()` on an array without any arguments will copy an array
 
-- I haven't used `concat()` in the past
+- Using `concat()` on a blank array will create a copy
 
   - It is a method that allows you to create a new array that contains two or more combined arrays
 
-    - I think there are some previous projects I've worked on where using a `concat()` may have been the correct solution as opposed to the method I used. I'll try to revisit and refactor that work.
-
   - [MDN Concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 
-- I've played with the spread operator `...`, primarily when learning React and dealing with state or different objects within it, but I've rarely used it as I don't typically write ES6
-
-  - It was nice to get a solid explanation and understanding about it.
+- I've used the spread operator `...`, primarily with state in React
+  - Good to get a better explanation and understanding about it.
 
   - [MDN Spread](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 
-### Future Improvements
+## Future Improvements
 
-- I need to learn as much as I possibly can about manipulating arrays and objects in the most efficient manner possible.
+- Interacting with and manipulating both arrays and objects is a huge part in JavaScript when dealing with data / APIs. Improving my understanding will allow me to be more efficient.
