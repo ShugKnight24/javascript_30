@@ -1,6 +1,15 @@
 # Fun with HTML5 Canvas
 
-### 3/29/2021
+## 4/3/2021
+- Move Controls back to main page
+- Button Active state
+- Add custom colors
+
+## 3/31/2021
+- Users can now save images
+- Moved controls to a side container
+
+## 3/29/2021
 - Add clear canvas button
 - Add thickness for drawing
 - Add eraser
