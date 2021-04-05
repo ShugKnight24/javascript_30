@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background:url('http://wes.io/hx9M/oh-la-la.jpg') center no-repeat;
+  background:url('../img/restaurant_background.jpeg') center no-repeat;
   background-size:cover;
   min-height:100vh;
   display:flex;
@@ -13,11 +13,10 @@ html {
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
-svg {
-  fill:white;
+.fish-image {
   background: rgba(0,0,0,0.1);
   padding: 20px;
   border-radius: 50%;
@@ -55,7 +54,6 @@ h2 {
 .plates label {
   flex:1;
   cursor: pointer;
-
 }
 
 .plates input {
@@ -71,6 +69,19 @@ h2 {
   content: '🌮';
 }
 
+.plates .delete-plate {
+  font-size: 24px;
+  color: #DC3545;
+  background-color: #FFF;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.plates .delete-plate:hover {
+  color: #C82333;
+  cursor: pointer;
+}
+
 .add-items {
   margin-top: 20px;
 }
@@ -79,4 +90,52 @@ h2 {
   padding:10px;
   outline:0;
   border:1px solid rgba(0,0,0,0.1);
+}
+
+.actions {
+  display: none;
+}
+
+.actions.active {
+  display: flex;
+}
+
+.check-all,
+.delete-all {
+  flex-basis: 50%;
+  padding: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.check-all {
+  background-color: #28A745;
+  border-color: #218838;
+}
+
+.check-all:hover {
+  background-color: #218838;
+}
+
+.check-all i {
+  padding: 3px;
+  border-radius: 50%;
+  color: #28A745;
+  background-color: #FFF;
+}
+
+.check-all.unchecked i {
+  color: #DC3545;
+  background-color: #FFF;
+}
+
+.delete-all {
+  background-color: #DC3545;
+  border-color: #C82333;
+}
+
+.delete-all:hover {
+  background-color: #C82333;
 }
