@@ -35,3 +35,4 @@ I will update this README as I complete projects within the course.
 14. [Object and Arrays - References vs Copying](14_references_vs_copying) - Finished 11/23/2017
 
 15. [LocalStorage and Event Delegation](15_localstorage) - Finished on 11/23/2017
+16. [CSS Text Shadow Mouse Move Effect](16_mouse_move_shadow) - 4/6/2021
