@@ -25,3 +25,4 @@ I will update this README as I complete projects within the course.
 15. [LocalStorage and Event Delegation](15_localstorage) - Refactored 4/5/2021
 16. [CSS Text Shadow Mouse Move Effect](16_mouse_move_shadow) - 4/6/2021
 17. [Sorting Band Names Without Articles](17_array_sort) - 4/7/2021
+18. [Tally String Times with Reduce](18_tally_string_times) - 4/8/2021
