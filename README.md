@@ -24,3 +24,4 @@ I will update this README as I complete projects within the course.
 14. [Object and Arrays - References vs Copying](14_references_vs_copying) - Refactored 4/4/2021
 15. [LocalStorage and Event Delegation](15_localstorage) - Refactored 4/5/2021
 16. [CSS Text Shadow Mouse Move Effect](16_mouse_move_shadow) - 4/6/2021
+17. [Sorting Band Names Without Articles](17_array_sort) - 4/7/2021
