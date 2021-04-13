@@ -28,4 +28,5 @@ I will update this README as I complete projects within the course.
 18. [Tally String Times with Reduce](18_tally_string_times) - 4/8/2021
 19. [Unreal Webcam Fun](19_webcam_fun) - 4/9/2021
 20. [Native Speech Recognition](20_speech_recognition) - 4/10/2021
-21. [Geolocation based Speedometer and Compass](21_geolocation) - 4/11/2021
+21. [Geolocation Based Speedometer and Compass](21_geolocation) - 4/11/2021
+22. [Follow Along Links](22_follow_along_links) - 4/12/2021
