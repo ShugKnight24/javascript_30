@@ -30,3 +30,4 @@ I will update this README as I complete projects within the course.
 20. [Native Speech Recognition](20_speech_recognition) - 4/10/2021
 21. [Geolocation Based Speedometer and Compass](21_geolocation) - 4/11/2021
 22. [Follow Along Links](22_follow_along_links) - 4/12/2021
+23. [Speech Synthesis](23_speech_synthesis) - 4/13/2021
