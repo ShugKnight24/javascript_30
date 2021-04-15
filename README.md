@@ -32,3 +32,4 @@ I will update this README as I complete projects within the course.
 22. [Follow Along Links](22_follow_along_links) - 4/12/2021
 23. [Speech Synthesis](23_speech_synthesis) - 4/13/2021
 24. [Sticky Nav](24_sticky_nav) - 4/14/2021
+25. [Event Capture, Propagation, Bubbling and Once](25_event_capture) - 4/15/2021
