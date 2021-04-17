@@ -34,3 +34,4 @@ I will update this README as I complete projects within the course.
 24. [Sticky Nav](24_sticky_nav) - 4/14/2021
 25. [Event Capture, Propagation, Bubbling and Once](25_event_capture) - 4/15/2021
 26. [Follow Along Dropdown](26_follow_along_dropdown) - 4/16/2021
+27. [Click and Drag Scroll](27_click_drag_scroll) - 4/17/2021
