@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Follow Along Nav</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<header class="cool-header">
+		<h2>Cool Header</h2>
+		<p>This rad header illustrates the dynamic nature of the nav. It takes the size of header in account to properly display the nav's white background</p>
+		<p>Pssssst! Hit the button below to remove this ridiculous header if you don't believe me</p>
+	</header>
+	<div class="button-container">
+		<button>Remove Header</button>
+	</div>
+  <nav class="top">
+    <div class="dropdown-background">
+      <span class="arrow"></span>
+    </div>
+    <ul class="cool">
+      <li>
+        <a href="#">About Me</a>
+        <div class="dropdown dropdown-bio">
+          <div class="bio">
+            <img src="./img/shug_hero.png">
+            <p>Shugmi Shumunov sure does love web development. He enjoys telling stories through code, his pupper Luna, basketball, bodybuilding, reading, photography, and of course, JavaScript!</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="#">Experience</a>
+        <ul class="dropdown dropdown-sites">
+          <!-- 
+		  <li>
+            <span class="code"></span>
+            <a href="" target="_blank" rel="noopener noreferrer"></a>
+          </li> 
+		  <li>
+            <span class="code"></span>
+            <a href="" target="_blank" rel="noopener noreferrer"></a>
+          </li> 
+		  <li>
+            <span class="code"></span>
+            <a href="" target="_blank" rel="noopener noreferrer"></a>
+          </li> 
+		-->
+        </ul>
+      </li>
+      <li>
+        <a href="#">Other Links</a>
+        <ul class="dropdown dropdown-info">
+			<li><a class="button" href="https://shumunovsolutions.com" target="_blank" rel="noopener noreferrer">Company Website</a></li>
+			<li><a class="button" href="https://shugknight24.github.io" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+			<li><a class="button" href="https://github.com/shugknight24" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+			<li><a class="button" href="https://twitter.com/ShumunovS" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+			<li><a class="button" href="https://www.linkedin.com/in/shugmishumunov/" target="_blank" rel="noopener noreferrer">LinkedIN</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+	<script src="./js/script.js"></script>
+</body>
+</html>
