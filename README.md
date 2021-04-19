@@ -36,3 +36,4 @@ I will update this README as I complete projects within the course.
 26. [Follow Along Dropdown](26_follow_along_dropdown) - 4/16/2021
 27. [Click and Drag Scroll](27_click_drag_scroll) - 4/17/2021
 28. [Video Speed Controller](28_video_speed_controller) - 4/18/2021
+29. [Countdown Timer](29_countdown_timer) - 4/19/2021
