@@ -1,6 +1,8 @@
 # JavaScript 30
 
-*Update - 4/6/2021:* Funny seeing my own commentary
+*4/20/2021:* Overall, really enjoyed this process. I'm happy I stuck with it and finished the thirty days this go around, it only took 3.5 years 😂. I'd like to improve and refactor many of these projects and display them on my portfolio. Shoutout to @wesbos for putting this course together.
+
+*4/6/2021:* Funny seeing my own commentary
 
 **Note**: I will be using this repo to track my progress with Wes Bos' course, [JavaScript 30](https://javascript30.com/). I heard about JavaScript 30 a long time ago and I wanted to get into it, but never did. I am creating this repo in order to to create some accountability and start tracking my progress as I slowly make my way through this program. By completing this course, I hope to improve my skills with Vanilla JavaScript, ES6, and my approach to programmatic thinking in general.
 
