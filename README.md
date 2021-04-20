@@ -37,3 +37,4 @@ I will update this README as I complete projects within the course.
 27. [Click and Drag Scroll](27_click_drag_scroll) - 4/17/2021
 28. [Video Speed Controller](28_video_speed_controller) - 4/18/2021
 29. [Countdown Timer](29_countdown_timer) - 4/19/2021
+30. [Whack-A-Mole](30_whack_a_mole) - 4/20/2021
