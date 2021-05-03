@@ -1,0 +1,242 @@
+@font-face {
+	font-family: 'Betty';
+	src: url(../fonts/bettynoir.ttf) format('truetype');
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.site-wrapper {
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Betty', sans-serif;
+	font-size: 36px;
+}
+
+.projects-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+a {
+	text-decoration: none;
+	flex-basis: 47.5%;
+	margin: 1.25%;
+}
+
+.project {
+	min-height: 300px;
+	position: relative;
+}
+
+.project.drum-kit {
+	background: url('../img/drum_kit.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.css-js-clock {
+	background: url('../img/css_js_clock.png');
+	background-position: top;
+	background-size: cover;
+}
+
+.project.css-js-vars {
+	background: url('../img/css_js_vars.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.array-cardio-1 {
+	background: url('../img/array_cardio_1.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.flex-panels {
+	background: url('../img/flex_panels.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.ajax-map {
+	background: url('../img/ajax_map.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.array-cardio-2 {
+	background: url('../img/array_cardio_2.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.canvas-drawing {
+	background: url('../img/canvas_drawing.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.dev-tool-tricks {
+	background: url('../img/dev_tool_tricks.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.multiple-checkboxes {
+	background: url('../img/multiple_checkboxes.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.html5-video {
+	background: url('../img/html5_video.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.key-sequence-detection {
+	background: url('../img/key_sequence_detection.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.slide-image-on-scroll {
+	background: url('../img/slide_image_on_scroll.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.references-vs-copying {
+	background: url('../img/references_vs_copying.png');
+	background-position: top;
+	background-size: cover;
+}
+
+.project.local-storage {
+	background: url('../img/local_storage.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.css-text-shadow {
+	background: url('../img/css_text_shadow.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.sorting-data {
+	background: url('../img/sorting_data.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.tally-times{
+	background: url('../img/tally_times.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.webcam-fun {
+	background: url('../img/webcam_fun.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.speech-recognition {
+	background: url('../img/speech_recognition.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.geolocation {
+	background: url('../img/geolocation.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.follow-along-links {
+	background: url('../img/follow_along_links.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.speech-synthesis {
+	background: url('../img/speech_synthesis.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.ajax-map {
+	background: url('../img/ajax_map.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.sticky-nav {
+	background: url('../img/sticky_nav.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.event-capture {
+	background: url('../img/event_capture.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.follow-dropdowns {
+	background: url('../img/follow_dropdowns.png');
+	background-position: center;
+	background-size: cover;
+}	
+
+.project.click-drag-scroll {
+	background: url('../img/click_drag_scroll.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.video-speed {
+	background: url('../img/video_speed.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.countdown-timer {
+	background: url('../img/countdown_timer.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.project.whack-a-mole {
+	background: url('../img/whack_a_mole.png');
+	background-position: center;
+	background-size: cover;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+h2 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-family: 'Betty', sans-serif;
+	color: #FFF;
+	background-color: #007BFF;
+	border-color: #007BFF;
+	padding: 15px 9px;
+	margin: 0;
+}
+
+a:hover h2 {
+	cursor: pointer;
+	background-color: #0069D9;
+	border-color: #0062CC;
+}
